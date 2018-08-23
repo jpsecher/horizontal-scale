@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+
+  counter:
+    image: jpsecher/horizontal-scale:latest
+    ports:
+      - target: 8080
+    deploy:
+      restart_policy:
+        condition: on-failure
+      mode: global
